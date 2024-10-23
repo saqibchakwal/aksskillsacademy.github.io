@@ -1,0 +1,849 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open sans";
+}
+
+body{
+    color: #333;
+    line-height: 2;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+header{
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+header:hover{
+    background-color: #E64A19;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header h1{
+    margin-left: 0%;
+    font-size: 1.8em;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+nav ul{
+    display:flex
+}
+nav ul li{
+    margin-right: 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-shadow: 3px 3px 3px #1a1919;
+}
+
+/* Course Card Styles */
+#courses h2{
+    text-align: center;
+    font-size: 40px;
+    font-family:  Georgia,  serif;
+    padding: 10px ;
+    background-color: #00A794;
+    color: white;
+    border-radius: 100px;;
+    margin-top: 10px;
+    text-shadow: 3px 3px 3px #1a1919;
+}
+#courses h2:hover{
+    background-color: #00A780
+
+}
+.course-card {
+    border: 1px solid #ccc;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    
+    background-color: #f9f9f9; /* Light background */
+}
+
+.course-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.course-card button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.course-card button:hover {
+    background-color: #45a049;
+}
+
+.curriculum-details {
+    display: none; /* Hidden by default */
+}
+
+.hidden {
+    display: none;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Animation Effects */
+.course-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+#hero{
+    background-color: #00A794 ;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+#hero h2{
+    
+    text-align: center;
+    font-size: 40px;
+    font-family:  Georgia,  serif;
+    padding: 10px ;
+    background-color: #00A794;
+    color: white;
+    border-radius: 100px;;
+    margin-top: 10px;
+    text-shadow: 3px 3px 3px #1a1919;
+}
+.hero-image{
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 20px;
+   
+}
+.course-image{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.logo-section{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    height: 50px;
+    margin-right: 15px;
+}
+.btn{
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-self: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover{
+    background-color: #E64A19;
+    transform: scale(1.1);
+}
+
+#courses .course-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#faq {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#faq h2 {
+    font-size: 2.5em;
+    color: #00A794;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    background-color: #00A794;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-shadow: #00A794;
+}
+
+.faq-question:hover {
+    background-color: #e68a00;
+}
+
+.faq-answer {
+    padding: 0 15px;
+    display:none;
+    background-color: #fff;
+    border-left: 5px solid #ff9900;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-answer p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Add a media query for responsiveness */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .faq-answer p {
+        font-size: 1em;
+    }
+}
+/* Testimonials Section */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5em;
+    color: #ff9900;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonial h4 {
+    font-size: 1.2em;
+    color: #777;
+    font-style: italic;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        max-width: 90%;
+        margin: 20px 0;
+    }
+}
+/* Social Media Styles */
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Hide all slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Slide image styling */
+.hero-slide {
+    align-content: center;
+    width: 900px;
+    max-height: 900px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border-style: groove;
+    box-shadow: #333;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: bottom;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Dots navigation */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ff9900; /* Active color for dots */
+}
+
+/* Animation for fading */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.course-card h3{
+    color: #FF5722;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#contact{
+    text-align: center;
+    font-family: Verdana;
+}
+/* About Academy Section */
+.about-academy {
+    background-color:whitesmoke;
+    padding: 60px 20px;
+    color: black;
+    border-radius: 50px;
+}
+
+.about-wrapper {
+    text-align: center;
+    background-color:wheat;
+    max-width: 800px;
+    max-height: 300px;
+    margin: auto;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+}
+.about-wrapper:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background-color: rgb(247, 221, 152);
+    
+}
+.about-academy strong{
+    color:#3ebe33;
+}
+
+.about-academy h2 {
+    color:#1a1919;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Head of Academy and Faculty Section */
+.head-of-academy, .faculty-slider {
+    text-align: center;
+    margin: 40px 0;
+}
+.head-of-academy h2{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+.head-card, .faculty-card {
+   
+    background-color: white;
+    flex: 0 0 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+}
+.faculty-card:hover, .head-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+
+.head-card img, .faculty-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+.flag-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+/* Faculty Slider */
+.faculty-container-wrapper {
+    position:relative;
+    width: 100%;
+    margin: auto;
+    overflow:hidden;
+}
+.faculty-slider h2{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.faculty-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.faculty-card {
+    flex: 0 0 300px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
+.more-info {
+    height: 0;
+    overflow: hidden;
+    display: none;
+    transition: height 0.5s ease, opacity 0.5s ease; 
+    opacity: 1;
+}
+.more-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    
+}
+
+.more-info.show {
+    height: auto;
+    opacity: 1;
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+.more-info img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+.more-btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.more-btn:hover {
+    background-color: #FF7F50;
+}
+
+/*registartion form styles
+        /* General form styling */
+        .registration-container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff6600;
+            font-size: 2.3em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff8533;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+   /*code.org course styling sheet*/
+   /* Course Details Section */
+   .course-description button {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.course-description button:hover {
+    background-color: #228b22;
+}
+
+.curriculum-images {
+    margin-top: 20px;
+}
+
+.curriculum-img {
+    width: 80%;
+    padding: 20px;
+    max-width: 600px;
+    display: none;
+    margin: 0;
+    border-radius: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.4s, opacity 0.4s;
+}
+.curriculum-img.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1.05);
+}
+.course-details {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.course-details:hover {
+    transform: scale(1.02);
+}
+
+.course-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.course-image a {
+    width: 20%;
+    max-width: 400px;
+    height: 60%;
+    border-radius: 50%;
+    margin-right: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.course-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.course-description {
+    flex-grow: 1;
+}
+
+.course-description h3 {
+    color: #ff6600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 5px;
+}
+
+.course-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.enroll-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    margin-top: 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enroll-button:hover {
+    background-color: #ff3300;
+    transform: translateY(-5px);
+}
+   /* Add transitions and animations */
+.course-info img a, .enroll-button {
+    transition: transform 0.3s ease;
+}
+
+.course-info img:hover {
+    transform: scale(1.05);
+}
+
+.course-description {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* gallery page css*/
+.gallery-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img, 
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover img, 
+.gallery-item:hover video {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content img, .modal-content video {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}

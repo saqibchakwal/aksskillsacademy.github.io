@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <title>AKS SKILLS ACADEMY - Code.org Course</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="title icon/favicon-16x16.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    </head>
+    <body>
+        <header>
+            <div class="container header-flex">
+                <div class="logo-section">
+                    <a href="index.html"><img  src="title icon/AKS LOGO3.png" alt="logo of Aks Skills Academy" class="logo"></a>
+                    <h1>Aks Skills Academy</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about-2.html">About Us</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+ 
+        <!-- Course Section -->
+        <section class="course-details">
+            <div class="container">
+                <h2>Scratch</h2>
+                <div class="course-info">
+                    <a href="scratch.html"><img src="images/courses pics/scratch (2).png" alt="code-org" class="course-image"></a>
+                    <div class="course-description">
+                        <h3>Course Overview</h3>
+                        <p>This course is designed to teach students<br>  algorithms, loops, conditionals, functions, and variables through visual programming.<br> It involves learning to solve problems using computational thinking.</p>
+                        
+                        <h3>What Students Will Learn</h3>
+                        <ul>
+                            <li>Basic Coding Concepts</li>
+                            <li>Block-Based Programming</li>
+                            <li>Logical Reasoning & Sequencing</li>
+                            <li>Problem-Solving & Critical Thinking</li>
+                            <li>Collaboration and Communication</li>
+                            <li>Project-Based Learning</li>
+                        </ul>
+                        
+                        <h3>Benefits of This Course</h3>
+                        <ul>
+                            <li>Foundational Knowledge for Advanced Coding</li>
+                            <li>Problem-Solving Skills</li>
+                            <li>Creativity & Innovation</li>
+                            <li>Early Exposure to STEM</li>
+                            <li>Improves Focus & Patience</li>
+                        </ul>
+                        
+                        <button onclick="toggleCurriculum('code-org', 1)">View Curriculum Level 1</button>
+                        <button onclick="toggleCurriculum('code-org', 2)">View Curriculum Level 2</button>
+
+                        <!-- Curriculum Images -->
+                        <div class="curriculum-images">
+                            <img id="code-org-level-1" src="gallery/roadmap1.png" alt="Code.org Curriculum Level 1" class="hidden curriculum-img">
+                            <img id="code-org-level-2" src="gallery/roadmap2.png" alt="Code.org Curriculum Level 2" class="hidden curriculum-img">
+                        </div>
+
+                        <h3>Competitions and Participation</h3>
+                        <ul>
+                            <li>Participation in international competitions.</li>
+                            <li>Opportunities to showcase projects.</li>
+                            <li>Certificate of completion.</li>
+                        </ul>
+
+                        <h3>Class Schedule</h3>
+                        <ul>
+                            <li>Morning: 9:00 AM - 11:00 AM</li>
+                            <li>Afternoon: 2:00 PM - 4:00 PM</li>
+                        </ul>
+
+                        <h3>Fees Structure</h3>
+                        <ul>
+                            <li>15,000 PKR for 8 sessions (2 sessions per week)</li>
+                        </ul>
+
+                        <h3>Prerequisites</h3>
+                        <ul>
+                            <li>Basic understanding of computers (if applicable)</li>
+                            <li>Interest in coding</li>
+                        </ul>
+                        
+                        <!-- Enroll Now Button -->
+                        <a href="registration.html" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@aksskillsacademy.com</p>
+            <p>Phone: +92-3221418272</p>
+        </section>
+
+        <footer>
+            <div class="container">
+                <!-- Social Media Links -->
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=61553055724717&mibextid=ZbWKwL" target="_blank"><img src="media icons/facebook-icon.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="media icons/instagram-icon.svg" alt="Instagram"></a>
+                    <a href="https://wa.link/s7wvbi" target="_blank"><img src="media icons/whatsapp-icon.svg" alt="Whatsapp"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="media icons/youtube-icon.svg" alt="Youtube"></a>
+                </div>
+                <p>&copy; 2024 Aks Skills Academy. All rights reserved</p>
+            </div>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

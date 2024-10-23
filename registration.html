@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible"content="ie=edge">
+        <title>
+            AKS SKILLS ACADEMY
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon-16x16.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+
+    </head>
+    <body>
+        <header>
+            <div class="container header-flex">
+                <div class="logo-section">
+                    <a href="index.html"><img  src="title icon/AKS LOGO3.png" alt="logo of Aks Skills Academy" class="logo"></a>
+                    <h1> Aks Skills Academy</h1>
+                </div>
+                <div class="container">
+                    <!-- Social Media Links -->
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/profile.php?id=61553055724717&mibextid=ZbWKwL" target="_blank"><img src="media icons/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="media icons/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://wa.link/s7wvbi" target="_blank"><img src="media icons/whatsapp-icon.svg" alt="WhatsApp"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="media icons/youtube-icon.svg" alt="Youtube"></a>
+                    </div>
+                </div>
+                    <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        
+                        <li>
+                            <a href="about-2.html">About Us</a>
+                        </li>
+                        
+                        <li>
+                            <a href="courses.html">Courses</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery </a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact Us </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+<div class="registration-container">
+    <h2>Registration Form - Aks Skills Academy</h2>
+    <form action="submit_registration.php" method="post">
+        <div class="form-group">
+            <label for="name">Student's Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter student's full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name" name="father_name" placeholder="Enter father's name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Course you want to enroll in:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="code-org">Code.org</option>
+                <option value="scratch">Scratch</option>
+                <option value="robotics">Robotics</option>
+                <option value="app-development">App Development</option>
+                <option value="mental-math">Mental Math</option>
+                <option value="python-for-kids">Python for Kids</option>
+                <option value="web-development">Web Development for Kids</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Do you have any previous experience in coding?</label>
+            <textarea id="experience" name="experience" placeholder="Describe any prior experience in coding" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number (for WhatsApp notifications):</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="preferred-time">Preferred Class Time:</label>
+            <select id="preferred-time" name="preferred_time" required>
+                <option value="">Select a time slot</option>
+                <option value="morning-9am">Morning (9:00 AM - 10:30 AM)</option>
+                <option value="morning-11am">Morning (11:00 AM - 12:30 PM)</option>
+                <option value="afternoon-2pm">Afternoon (2:00 PM - 3:30 PM)</option>
+                <option value="afternoon-4pm">Afternoon (4:00 PM - 5:30 PM)</option>
+            </select>
+        </div>
+
+        <button type="submit">Enroll Now</button>
+    </form>
+</div>
+<section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email:info@aksskillsacademy.com</p>
+    <p>Phone:+92-3221418272</p>
+</section>
+<footer>
+    <footer>
+        <div class="container">
+           
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61553055724717&mibextid=ZbWKwL" target="_blank"><img src="media icons/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="media icons/instagram-icon.svg" alt="Instagram"></a>
+                <a href="https://wa.link/s7wvbi" target="_blank"><img src="media icons/whatsapp-icon.svg" alt="Whatsapp"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="media icons/youtube-icon.svg" alt="Youtube"></a>
+            </div>
+        </div>
+    </footer>
+    <div class="container">
+        <p>&copy; 2024 Aks Skills Academy. All rights reserved</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
