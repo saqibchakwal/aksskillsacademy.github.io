@@ -54,8 +54,9 @@
         </header>
 <div class="registration-container">
     <h2>Registration Form - Aks Skills Academy</h2>
-    <form action="submit_registration.php" method="post">
+    <form action="https://api.web3forms.com/submit" method="POST">
         <div class="form-group">
+            <input type="hidden" name="access_key" value="17fafa3d-6d67-4f17-abcd-06c3bddb0737">
             <label for="name">Student's Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter student's full name" required>
         </div>
@@ -109,6 +110,8 @@
                 <option value="afternoon-4pm">Afternoon (4:00 PM - 5:30 PM)</option>
             </select>
         </div>
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
 
         <button type="submit">Enroll Now</button>
     </form>
@@ -119,7 +122,6 @@
     <p>Phone:+92-3221418272</p>
 </section>
 <footer>
-    <footer>
         <div class="container">
            
             <!-- Social Media Links -->
@@ -130,7 +132,6 @@
                 <a href="https://www.youtube.com" target="_blank"><img src="media icons/youtube-icon.svg" alt="Youtube"></a>
             </div>
         </div>
-    </footer>
     <div class="container">
         <p>&copy; 2024 Aks Skills Academy. All rights reserved</p>
     </div>
